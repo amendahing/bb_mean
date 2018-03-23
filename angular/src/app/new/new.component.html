@@ -1,0 +1,13 @@
+<p>Register a Restaurant</p>
+
+<form (submit)="addRestaurant()">
+    <p> {{ newRestaurant | json }} {{ cuisine | json }} </p>
+    <input type="text" name="newRestaurant" placeholder="Restaurant" [(ngModel)]="newRestaurant" />
+
+    <input type="text" name="cuisine" placeholder="Cuisine" [(ngModel)]="cuisine" />
+    <input type="submit" value="Register" />
+</form>
+
+<div *ngIf="errors" id="error_message">
+    <p>{{ errors }}</p>
+</div>

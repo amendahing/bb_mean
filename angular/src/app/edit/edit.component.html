@@ -1,0 +1,14 @@
+<p>Edit Restaurant</p>
+<div *ngIf="errors" id="error_message">
+    <p>{{ errors }}</p>
+</div>
+<div id="edit-form">
+    <form (submit)="submitEdit()">
+
+        <input type="text" [(ngModel)]="name" name="name" placeholder="Change Name"/>
+
+        <input type="text" [(ngModel)]="cuisine" name="cuisine" placeholder="Cuisine"/>
+
+        <input type="submit" value="Submit Edit" />
+    </form>
+</div>

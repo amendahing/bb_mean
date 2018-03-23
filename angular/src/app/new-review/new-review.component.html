@@ -1,0 +1,16 @@
+<p>Write a review for </p>
+
+
+<form (submit)="addReview()">
+
+    Your Name: <input type="text" name="customer" placeholder="First Name" [(ngModel)]="customer" />
+    <br>
+    Stars: <input type="text" name="star" placeholder="1-5" [(ngModel)]="star" />
+    <br>
+    Your Review: <input type="text" name="cont" [(ngModel)]="cont" />
+
+    <button (click)="cancel()">Cancel</button>
+    <input type="submit" value="Submit" />
+</form>
+
+<p> {{ customer | json }} {{ star | json }} {{ cont | json }} </p>

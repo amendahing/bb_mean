@@ -1,0 +1,21 @@
+<button [routerLink]="['add_restaurant']">Add a Restaurant!</button>
+
+
+<table style="width:100%; text-align: center; margin-top: 20px">
+  <tr>
+    <th>Restaurant</th>
+    <th>Cuisine</th>
+    <th>Actions Available</th>
+  </tr>
+
+  <tr *ngFor="let x of restaurants">
+    <td>{{x.name}}</td>
+    <td>{{x.cuisine}}</td>
+    <td>
+        <button (click)="readReviews(x._id)">Read Reviews</button>
+        <button (click)="showEdit(x._id)">Update</button>
+        <button (click)="deleteRest(x._id)">Delete</button>
+    </td>
+  </tr>
+
+</table>

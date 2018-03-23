@@ -1,0 +1,21 @@
+<br>
+<button [routerLink]="['']">Home</button>
+
+<h3>Reviews for {{restaurant_name}}</h3>
+
+<button (click)="addReview(id)">Add New Review</button>
+
+<table style="width:100%; text-align: center; margin-top: 20px">
+    <tr>
+        <th>Customer</th>
+        <th>Star</th>
+        <th>Description</th>
+    </tr>
+
+    <tr *ngFor="let x of reviews">
+        <td>{{x.customer}}</td>
+        <td>{{x.star}}</td>
+        <td style="width: 450px">{{x.cont}}</td>
+    </tr>
+
+</table>
